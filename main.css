@@ -1,0 +1,108 @@
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: #b5c2b7;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color:black;
+}
+
+body {
+  background-color: #285e7d;
+  font-family: 'Segoe UI', monospace;
+}
+
+.logo {
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  padding-right: 30px;
+}
+
+.intro {
+  color: aliceblue;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.intro p {
+  padding: 30px;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.image {
+  max-height: 350px;
+  max-width: 350px;
+  box-shadow: 5px 10px 12px black;
+}
+
+.projectimg {
+  width: 100%;
+  height: 220px;       /* Forces every image area to be the exact same height */
+  object-fit: contain;  /* Prevents stretching; keeps the entire screenshot visible */
+  border-radius: 12px;
+}
+
+
+.projects {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.project-card {
+  border-radius: 18px;
+  padding: 1.25rem;
+  max-width: 320px;
+  text-align: center;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.sectioncontainer {
+  color: #b5c2b7;
+}
+
+.sectioncontainer p {
+  color:aliceblue;
+}
+
+.sectioncontainer a {
+  transition: opacity 0.25s ease;
+}
+
+.sectioncontainer a:hover {
+  opacity: 0.5;
+}
+
+#projecttext {
+  margin-left: 40px;
+  text-align: left;
+}
+
+#contact {
+  color:black;
+  text-align: center;
+}
