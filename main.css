@@ -106,3 +106,121 @@ body {
   color:black;
   text-align: center;
 }
+
+#contact a {
+  position: relative;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 6em;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  background-color: aliceblue;
+}
+
+#contact a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* For project3 page */
+.image-first-row {
+  display: flex;
+  gap: 10rem;
+  justify-content: center;
+  max-height: 600px;
+  align-items: flex-start;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.image-second-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.project3img {
+  object-fit: contain;  /* ← move here, onto the element itself */
+  max-height: 600px;
+  width: auto;
+}
+
+.img-wrap {
+  width: 500px;
+  height: 350px;
+}
+
+.img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+#headerp3 {
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  color: aliceblue;
+}
+
+.description3 {
+  text-align: center;
+}
+
+.role3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.description3 p {
+  margin: 0;
+  text-align: center;
+  border: 2px solid grey;
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin: 0 auto;
+  max-width: 900px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: aliceblue;
+}
+
+/* Watch UI page */
+.watchuiimage {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  max-height: 600px;
+  align-items: flex-start;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#headerp2 {
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  color: aliceblue;
+}
+
+/* Yerba Mate Page */
+.mateimage {
+  width: 400px;
+  height: auto;
+}
