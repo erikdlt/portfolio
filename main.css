@@ -7,7 +7,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  color: #b5c2b7;
+  color: white;
 }
 
 nav a {
@@ -21,6 +21,11 @@ nav a {
 
 nav a:hover {
   color:black;
+}
+
+nav a.active {
+  color: black;
+  font-weight: 700;
 }
 
 body {
@@ -40,6 +45,25 @@ body {
   text-align: center;
 }
 
+.intro h1 {
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  color: white;
+  margin: 0;
+}
+
+.hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6vw;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
 .intro p {
   padding: 30px;
   max-width: 650px;
@@ -47,9 +71,9 @@ body {
 }
 
 .image {
-  max-height: 350px;
-  max-width: 350px;
-  box-shadow: 5px 10px 12px black;
+  width: 187px;
+  height: 350px;
+  object-fit: cover;
 }
 
 .projectimg {
@@ -76,6 +100,14 @@ body {
   text-align: center;
 }
 
+.project-card p {
+  background-color: rgba(1, 2, 5, 0.5);
+  color: #1f2d3d;
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-top: 0.75rem;
+}
+
 .project-card h3 {
   margin-top: 0;
   font-weight: bold;
@@ -83,6 +115,30 @@ body {
 
 .sectioncontainer {
   color: #b5c2b7;
+}
+
+#projects {
+  position: relative;
+  background-color: #b5c2b7;
+  border-radius: 20px 107px 107px 20px;
+  overflow: hidden;
+  padding: 40px 5% 60px;
+}
+
+.wave {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#projecttext,
+.projects {
+  position: relative;
+  z-index: 1;
 }
 
 .sectioncontainer p {
@@ -110,23 +166,21 @@ body {
 #contact a {
   position: relative;
   font-size: 17px;
-  text-transform: uppercase;
   text-decoration: none;
-  padding: 1em 2.5em;
+  padding: 10px 40px;
   display: inline-block;
   cursor: pointer;
-  border-radius: 6em;
-  transition: all 0.2s;
-  border: 2px solid black;
+  border-radius: 4px;
+  transition: opacity 0.2s ease;
+  border: none;
   font-family: inherit;
-  font-weight: 500;
-  color: black;
-  background-color: aliceblue;
+  font-weight: 400;
+  color: white;
+  background-color: #000000;
 }
 
 #contact a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0.85;
 }
 
 .sectioncontainer h2 {
@@ -154,6 +208,7 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 
 
 /* For project3 page */
@@ -195,6 +250,7 @@ body {
 }
 
 #headerp3 {
+  font-family:'Plus Jakarta Sans';
   text-align: center;
   margin: 0 auto;
   padding-bottom: 30px;
@@ -215,15 +271,14 @@ body {
 }
 
 .description3 p {
-  margin: 0;
-  text-align: center;
-  border: 3px solid rgba(240, 245, 255, 0.68);
-  border-radius: 15px;
-  padding: 1.25rem;
+  background-color: rgba(1, 2, 5, 0.5);
+  color: white;
+  border-radius: 10px;
+  padding: 0.75rem;
   margin: 0 auto;
+  margin-top: 0.75rem;
   max-width: 900px;
-  background-color: rgba(5, 6, 45);
-  color: rgba(255, 255, 255, 0.868);
+  text-align: center;
 }
 
 /* Watch UI page */
@@ -238,6 +293,7 @@ body {
 }
 
 #headerp2 {
+  font-family:'Plus Jakarta Sans';
   text-align: center;
   margin: 0 auto;
   padding-bottom: 30px;
@@ -253,4 +309,15 @@ body {
 
 h4 {
   color:rgba(0, 0, 0, 0.55);
+}
+
+/* Homepage responsiveness */
+@media (max-width: 720px) {
+  .intro h1 {
+    font-size: 32px;
+  }
+
+  #projects {
+    border-radius: 20px;
+  }
 }
