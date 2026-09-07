@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="main.css">
-  <script src="index.js"></script>
+  <script src="main.js" defer></script>
 </head>
 <body>
   <header>
@@ -32,10 +32,14 @@
     <h1 id="headerp3">MATE NOW - UCSC Group Project</h1>
 
     
-      <div class="image-first-row">
-      <img class="mateimage" src="img/yimage2.png">
-      <img class="mateimage" src="img/yimage3.png">
-      <img class="mateimage" src="img/yimage4.png">
+      <div class="slideshow">
+        <button class="slide-arrow slide-prev" aria-label="Previous image">&#10094;</button>
+        <div class="slide-track">
+          <img class="slide-img active" src="img/yimage2.png" alt="MATE NOW screenshot 1">
+          <img class="slide-img" src="img/yimage3.png" alt="MATE NOW screenshot 2">
+          <img class="slide-img" src="img/yimage4.png" alt="MATE NOW screenshot 3">
+        </div>
+        <button class="slide-arrow slide-next" aria-label="Next image">&#10095;</button>
       </div>
 
       <div class="description3">

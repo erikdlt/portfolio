@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="main.css">
-  <script src="index.js"></script>
+  <script src="main.js" defer></script>
 </head>
 <body>
   <header>
@@ -33,17 +33,16 @@
     <h1 id="headerp2">Fitness App for Smart Watch UI</h1>
 
     
-      <div class="image-first-row">
-        <div class="img-wrap">
-      <img src="img/smartwatch2.png">
+      <div class="slideshow">
+        <button class="slide-arrow slide-prev" aria-label="Previous image">&#10094;</button>
+        <div class="slide-track">
+          <img class="slide-img active" src="img/smartwatch.png" alt="MATE NOW screenshot 1">
+          <img class="slide-img" src="img/smartwatch2.png" alt="Watch UI screenshot 2">
+          <img class="slide-img" src="img/smartwatch3.png" alt="Watch UI screenshot 3">
+          <img class="slide-img" src="img/smartwatch4.png" alt="Watch UI screenshot 4">
         </div>
-        <div class="img-wrap">
-      <img src="img/smartwatch3.png">
-        </div>
+        <button class="slide-arrow slide-next" aria-label="Next image">&#10095;</button>
       </div>
-
-      <div class="image-second-row">
-        <img id="longimagep2" src="img/smartwatch4.png">
 
       </div>
 
