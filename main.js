@@ -20,21 +20,32 @@
   }
  
 
+  // Image slideshow (used on project pages) — one item visible at a
+  // time, advanced with the prev/next arrows. Slides can be images or
+  // videos; a video only plays while it's the active slide.
   const slideshow = document.querySelector('.slideshow');
   if (slideshow) {
     const slides = Array.from(slideshow.querySelectorAll('.slide-img'));
-    if (slides.length) {
-      const prevBtn = slideshow.querySelector('.slide-prev');
-      const nextBtn = slideshow.querySelector('.slide-next');
-      let current = Math.max(slides.findIndex((slide) => slide.classList.contains('active')), 0);
-
-      const showSlide = (index) => {
-        slides[current].classList.remove('active');
-        current = (index + slides.length) % slides.length;
-        slides[current].classList.add('active');
-      };
-
-      prevBtn?.addEventListener('click', () => showSlide(current - 1));
-      nextBtn?.addEventListener('click', () => showSlide(current + 1));
-    }
+    const prevBtn = slideshow.querySelector('.slide-prev');
+    const nextBtn = slideshow.querySelector('.slide-next');
+    let current = Math.max(slides.findIndex((slide) => slide.classList.contains('active')), 0);
+ 
+    const showSlide = (index) => {
+      const outgoing = slides[current];
+      if (outgoing.tagName === 'VIDEO') {
+        outgoing.pause();
+      }
+      outgoing.classList.remove('active');
+ 
+      current = (index + slides.length) % slides.length;
+      const incoming = slides[current];
+      incoming.classList.add('active');
+      if (incoming.tagName === 'VIDEO') {
+        incoming.currentTime = 0;
+        incoming.play().catch(() => {});
+      }
+    };
+ 
+    prevBtn?.addEventListener('click', () => showSlide(current - 1));
+    nextBtn?.addEventListener('click', () => showSlide(current + 1));
   }
