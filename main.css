@@ -28,6 +28,7 @@ body {
   font-family: 'Segoe UI', monospace;
 }
 
+
 .logo {
   font-family: 'Plus Jakarta Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
@@ -90,16 +91,18 @@ body {
 }
 
 .sectioncontainer a {
-  transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease, box-shadow 0.25s ease;
 }
 
 .sectioncontainer a:hover {
   opacity: 0.5;
+  filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.4));
 }
 
 #projecttext {
   margin-left: 40px;
   text-align: left;
+  color: whitesmoke;
 }
 
 #contact {
